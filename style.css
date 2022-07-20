@@ -14,8 +14,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-@media screen (min-width: 720px) {
-}
+
 .beatbox {
   width: 400px;
   height: 400px;
@@ -49,3 +48,15 @@ body {
   font-size: 1.5em;
   transition: all 0.2s;
 }
+@media screen and (max-width: 500px) {
+  div.container {
+    height: 600px;
+  }
+  div.beat {
+    width: 10px;
+    height: 10px;
+  }
+  div.button {
+    height: 5px;
+    width: 6px;
+  }
