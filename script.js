@@ -65,11 +65,22 @@ triggerBeat = (event) => {
     beats[keyCode].button.select();
   }
 };
-
+let triggerBeater = (id) => {
+  if (id in beats) {
+    let key = beats[id];
+    key.beat.play();
+    key.button.select();
+  }
+};
 /**
  * Keydown listener to fire triggerBeat function
  * HINT: Log the keyCode of the keyb
  */
 document.addEventListener("keydown", (e) => {
   triggerBeat(e);
+});
+document.addEventListener("mouseover", (e) => {
+  console.log(e.target.id);
+  let id = e.target.id;
+  triggerBeater(id);
 });
