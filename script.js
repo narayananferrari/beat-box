@@ -79,8 +79,8 @@ let triggerBeater = (id) => {
 document.addEventListener("keydown", (e) => {
   triggerBeat(e);
 });
-document.addEventListener("mouseover", (e) => {
-  console.log(e.target.id);
+document.addEventListener("touchstart", (e) => {
   let id = e.target.id;
   triggerBeater(id);
 });
+
